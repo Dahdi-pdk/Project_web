@@ -1,36 +1,40 @@
-html, body, * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 /* Header dengan gradient hijau */
 .header {
-    width: 100%;
-    height: 110px;
-    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: center;
-    color: #fff;
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  width: 100%;
+  height: 110px;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.sidebar-tombol{
-    left: 10px;
-    cursor: pointer;
-    position: absolute;
+.sidebar-tombol {
+  left: 10px;
+  cursor: pointer;
+  position: absolute;
 }
-.sidebar-tombol:hover{
-    transform: scale(1.2);
+
+.sidebar-tombol:hover {
+  transform: scale(1.2);
 }
+
 .sidebar {
   position: fixed;
   left: -250px;
@@ -66,36 +70,59 @@ html, body, * {
   transition: margin-left 0.3s ease;
 }
 
-.sidebar.active ~ .content {
+.sidebar.active~.content {
   margin-left: 250px;
 }
+
 /* Kontainer konten dengan flex dan wrap */
 .kontainer-content {
-    width: 100%;
-    min-height: 70vh;
-    background: #f8fafc;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; /* ubah ke nowrap agar kotak disusun dari atas */
-    justify-content: flex-start; /* mulai dari atas */
-    align-items: center;
-    gap: 24px;
-    padding: 40px 0;
+  width: 100%;
+  min-height: 70vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* ubah ke nowrap agar kotak disusun dari atas */
+  justify-content: flex-start;
+  /* mulai dari atas */
+  align-items: center;
+  gap: 0px;
+  padding: 0;
 }
 
 /* Style unutk ketiga konten utama */
 .konten {
-    width: 96%;
-    height: 100vh;
-    background: #fff;
-    margin: 0;
-    border-radius: 18px;
-    box-shadow: 0 4px 16px rgba(39, 174, 96, 0.08);
-    padding: 28px 22px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    /* display: flex;
-    flex-direction: row; 
-    align-items: center; */
+  width: 96%;
+  height: 100vh;
+  background: #fff;
+  margin-top: 5vh;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(39, 174, 96, 0.08);
+  /* padding: 28px 22px; */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.konten-1 {
+  width: 96%;
+  height: 100vh;
+  background: #fff;
+  margin: 0;
+  border-bottom: 18px;
+  border-left: 18px;
+  border-right: 18px;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.konten-1 img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 /* animasi ketika hover dengan kursor */
 /* .konten:hover {
@@ -105,30 +132,31 @@ html, body, * {
 
 /* Footer dengan gradient hitam */
 .footer {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, #232526 0%, #000 100%);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(90deg, #232526 0%, #000 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
-    .kontainer-content {
-        gap: 16px;
-        padding: 24px 0;
-    }
-}
-@media (max-width: 700px) {
-    .kontainer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-    }
+
+
+@media (max-width: 500px) {
+  .kontainer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .konten-1 img{
+    width: 150px;
+    height: 150px;
+    margin-top :100px; 
+  }
 }
