@@ -7,23 +7,46 @@ body,
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+body{
+  background-color: #000000;
+}
 /* Header dengan gradient hijau */
 .header {
+  position: fixed;
   width: 100%;
-  height: 110px;
-  /* background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); */
-  background-color: #E8F5E9;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  color: #1E4620;
-  font-size: 2.2rem;
-  letter-spacing: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  padding: 1.5rem 2rem;
+  background-color: rgba(27, 67, 50, 0.8); /* hijau gelap semi transparan */
+  color: #fff;
+  z-index: 999;}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #FFD700;
+}
+
+.cta-button {
+  background-color: #FFD700;
+  color: #1B4332;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #F1C40F;
+}
+.navbar a:hover {
+  color: #FFD700;
 }
 
 .sidebar-tombol {
@@ -107,13 +130,11 @@ body,
 .kontainer-content {
   width: 100%;
   min-height: 70vh;
-  background: #f8fafc;
+  background: #b4b4b4;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  /* ubah ke nowrap agar kotak disusun dari atas */
   justify-content: flex-start;
-  /* mulai dari atas */
   align-items: center;
   gap: 0px;
   padding: 0;
@@ -136,9 +157,9 @@ body,
   height: 100vh;
   background: #fff;
   margin: 0;
-  border-bottom: 18px;
+  /* border-bottom: 18px;
   border-left: 18px;
-  border-right: 18px;
+  border-right: 18px; */
   border-top: none;
   border-radius: 0 0 10px 10px;
 }
