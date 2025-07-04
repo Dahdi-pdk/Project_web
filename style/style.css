@@ -11,12 +11,13 @@ body,
 .header {
   width: 100%;
   height: 110px;
-  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  /* background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); */
+  background-color: #E8F5E9;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #1E4620;
   font-size: 2.2rem;
   letter-spacing: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -26,11 +27,39 @@ body,
 }
 
 .sidebar-tombol {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   left: 10px;
   cursor: pointer;
   position: absolute;
 }
-
+.sidebar-tombol span{
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+.sidebar-tombol span:nth-child(1){
+  transform-origin: top left;
+}
+.sidebar-tombol span:nth-child(2){
+  opacity: 1;
+}
+.sidebar-tombol span:nth-child(3){
+  transform-origin: bottom left;
+}
+.sidebar-tombol.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px,5px);
+}
+.sidebar-tombol.active span:nth-child(2){
+  opacity: 0;
+}
+.sidebar-tombol.active span:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 .sidebar-tombol:hover {
   transform: scale(1.2);
 }
