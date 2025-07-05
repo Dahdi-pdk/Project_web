@@ -1,47 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta nama="shortcut icon" href="#">
-    <title>Beranda</title>
-    <link rel="stylesheet" href="../style/style_primary.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Edukasi UMKM</title>
+  <link rel="stylesheet" href="../style/style_primary.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form {
+      margin-top: 20px;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- kak ini adalah bagian header -->
-    <header class="navbar">
+  <header class="navbar">
     <div class="logo">halalbiz<span style="color: gold;">UMKM.id</span></div>
     <nav>
       <a href="../index.html">Beranda</a>
-      <a href="#">Tentang</a>
-      <a href="forum.html">Edukasi</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="#">Edukasi & Forum</a>
       <a href="market.html">Marketplace</a>
       <a href="komunitas.html">Komunitas</a>
       <a href="kontak.html">Kontak</a>
     </nav>
   </header>
 
+  <div class="container">
+    <h1>Halaman Edukasi UMKM</h1>
 
-    <!-- kak ini bagian kontent -->
-    <div class="kontainer-content">
-        <!-- kak kontent di bagi tiga ya -->
-        <div class="konten-1">
-            <!-- logo uin -->
-             <div class="edu">
-
-             </div>
-             <div class="edu">
-                
-             </div>
-        </div>
+    <!-- Pendampingan Sertifikat -->
+    <div class="card">
+      <h2>Pendampingan Sertifikat Otomatis</h2>
+      <p>
+        Dapatkan pendampingan otomatis untuk mengurus sertifikasi pelaku UMKM. Kami akan membantu setiap langkah proses secara digital.
+      </p>
+      <button onclick="mulaiPendampingan()">Mulai Pendampingan</button>
     </div>
 
-    <!-- kak ini bagian footer -->
-    <div class="footer"></div>
-    <script src="../script/script.js"></script>
-</body>
+    <!-- Informasi & Pengajuan Pembiayaan -->
+    <div class="card">
+      <h2>Informasi & Pengajuan Pembiayaan</h2>
+      <p>
+        Cari tahu informasi pembiayaan terbaru untuk UMKM dan ajukan pembiayaan secara langsung melalui form di bawah ini.
+      </p>
 
+      <form id="formPembiayaan">
+        <label>Nama Lengkap</label>
+        <input type="text" name="nama" required />
+
+        <label>Email</label>
+        <input type="email" name="email" required />
+
+        <label>Nama Usaha</label>
+        <input type="text" name="usaha" required />
+
+        <label>Tujuan Pembiayaan</label>
+        <textarea name="tujuan" rows="4" required></textarea>
+
+        <button type="submit">Ajukan Pembiayaan</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function mulaiPendampingan() {
+      alert("Fitur pendampingan otomatis sedang dalam pengembangan.");
+    }
+
+    document.getElementById("formPembiayaan").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Pengajuan pembiayaan telah dikirim. Terima kasih!");
+      this.reset();
+    });
+  </script>
+</body>
 </html>

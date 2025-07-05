@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: rgba(27, 67, 50, 0.8); /* hijau gelap semi transparan */
+  color: #fff;
+  z-index: 999;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #FFD700;
+}
