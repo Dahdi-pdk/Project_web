@@ -1,3 +1,61 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #1A1A1A;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form {
+  margin-top: 20px;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -5,10 +63,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background-color: rgba(27, 67, 50, 0.8); /* hijau gelap semi transparan */
+  background-color: rgba(27, 67, 50, 0.8);
+  /* hijau gelap semi transparan */
   color: #fff;
   z-index: 999;
 }
+
 .navbar a {
   color: #fff;
   text-decoration: none;

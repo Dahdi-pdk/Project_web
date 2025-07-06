@@ -1,47 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta nama="shortcut icon" href="#">
-    <title>Beranda</title>
-    <link rel="stylesheet" href="../style/style_primary.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forum & Komunitas</title>
+  <link rel="stylesheet" href="../style/komunitas.css" />
+  <style>
+    
+  </style>
 </head>
-
 <body>
-    <!-- kak ini adalah bagian header -->
+  <div class="kontainer-komunitas">
     <header class="navbar">
     <div class="logo">halalbiz<span style="color: gold;">UMKM.id</span></div>
     <nav>
       <a href="../index.html">Beranda</a>
-      <a href="#">Tentang</a>
-      <a href="forum.html">Edukasi</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="edukasi.html">Edukasi</a>
       <a href="market.html">Marketplace</a>
-      <a href="komunitas.html">Komunitas</a>
+      <a href="#">Komunitas</a>
       <a href="kontak.html">Kontak</a>
     </nav>
   </header>
+  <!-- <header>
+    <h1>Forum & Komunitas</h1>
+    <p>Tempat berdiskusi, belajar, dan berkembang bersama.</p>
+  </header> -->
 
+  <!-- Banner WhatsApp -->
+  <section class="banner banner-wa">
+    <h2>🔗 Gabung Grup WhatsApp</h2>
+    <p>Bergabunglah dalam diskusi seru dengan komunitas kami.</p>
+    <a href="https://chat.whatsapp.com/LinkGrup" target="_blank" class="btn-wa">Gabung Sekarang</a>
+  </section>
 
-    <!-- kak ini bagian kontent -->
-    <div class="kontainer-content">
-        <!-- kak kontent di bagi tiga ya -->
-        <div class="konten-1">
-            <!-- logo uin -->
-             <div class="edu">
-
-             </div>
-             <div class="edu">
-                
-             </div>
-        </div>
+  <!-- Banner Kalender & Pelatihan -->
+  <section class="banner banner-kalender">
+    <h2>📅 Kalender & Pelatihan</h2>
+    <div class="content-row">
+      <div id="calendar" class="calendar-box"></div>
+      <div class="training-box">
+        <h3>Pelatihan Terdekat</h3>
+        <ul id="training-list"></ul>
+      </div>
     </div>
+  </section>
 
-    <!-- kak ini bagian footer -->
-    <div class="footer"></div>
-    <script src="../script/script.js"></script>
+  <footer>
+    <p>&copy; 2025 Forum Komunitas Digital</p>
+  </footer>
+
+  </div>
+  
+  <script>
+    // Tampilkan tanggal hari ini
+    function renderCalendar() {
+      const calendar = document.getElementById("calendar");
+      const today = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      calendar.innerHTML = `
+        <h3>Hari Ini</h3>
+        <p>${today.toLocaleDateString('id-ID', options)}</p>
+      `;
+    }
+
+    // Daftar pelatihan
+    const pelatihanList = [
+      { tanggal: '08 Juli 2025', topik: 'Mengenal HTML & CSS' },
+      { tanggal: '12 Juli 2025', topik: 'JavaScript Dasar untuk Pemula' },
+      { tanggal: '18 Juli 2025', topik: 'Membangun Website Responsif' },
+    ];
+
+    function renderPelatihan() {
+      const ul = document.getElementById("training-list");
+      pelatihanList.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.tanggal} - ${item.topik}`;
+        ul.appendChild(li);
+      });
+    }
+
+    // Jalankan saat halaman dimuat
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCalendar();
+      renderPelatihan();
+    });
+  </script>
 </body>
-
 </html>

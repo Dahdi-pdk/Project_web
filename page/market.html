@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta nama="shortcut icon" href="#">
-    <title>Beranda</title>
-    <link rel="stylesheet" href="../style/style_primary.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketplace Halal</title>
+  <link rel="stylesheet" href="../style/style_market.css" />
 </head>
-
 <body>
-    <!-- kak ini adalah bagian header -->
-    <header class="navbar">
+  <header class="navbar">
     <div class="logo">halalbiz<span style="color: gold;">UMKM.id</span></div>
     <nav>
       <a href="../index.html">Beranda</a>
-      <a href="#">Tentang</a>
-      <a href="forum.html">Edukasi</a>
-      <a href="market.html">Marketplace</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="edukasi.html">Edukasi</a>
+      <a href="#">Marketplace</a>
       <a href="komunitas.html">Komunitas</a>
       <a href="kontak.html">Kontak</a>
     </nav>
   </header>
 
+  <main>
+    <!-- Section 1: e-Sertifikat -->
+    <section id="sertifikat">
+      <h2>Cetak e-Sertifikat Halal</h2>
+      <form id="formSertifikat">
+        <label for="nama">Nama UMKM:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama UMKM..." required />
+        <button type="submit">Cetak Sertifikat</button>
+      </form>
+      <p id="outputSertifikat"></p>
+    </section>
 
-    <!-- kak ini bagian kontent -->
-    <div class="kontainer-content">
-        <!-- kak kontent di bagi tiga ya -->
-        <div class="konten-1">
-            
-        </div>
-    </div>
+    <!-- Section 2: Pembayaran Zakat -->
+    <section id="zakat">
+      <h2>Pembayaran Zakat</h2>
+      <p>Klik tombol di bawah ini untuk menuju halaman pembayaran zakat Anda secara syariah:</p>
+      <a href="https://baznas.go.id/zakat" target="_blank" class="btn-zakat">Bayar Zakat Sekarang</a>
+    </section>
+  </main>
 
-    <!-- kak ini bagian footer -->
-    <div class="footer"></div>
-    <script src="../script/script.js"></script>
+  <footer>
+    <p>&copy; 2025 HalalBizUMKM.id</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
-
 </html>
