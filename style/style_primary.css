@@ -247,27 +247,51 @@ body {
   height: 100%;
   background-color: #333;
   color: white;
-  /* padding-left: 20px; */
   padding-top: 7%;
   transition: left 0.3s ease;
   z-index: 4;
+  overflow-x: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.active {
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .sidebar.active {
   left: 0;
 }
 
-.sidebar button {
+.sidebar button,
+details {
   width: 100%;
+  box-sizing: border-box;
   display: block;
-  /* color: white; */
   padding: 10px 0;
+  margin-left: 10px;
   text-decoration: none;
-
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+  background-color: transparent;
 }
 
 .sidebar button:hover {
-  background-color: #575757;
+  background-color: #f9ff9fc9;
+}
+.sidebar details {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 0;
 }
 
 /* Konten utama */
