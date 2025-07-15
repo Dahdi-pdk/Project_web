@@ -1,20 +1,20 @@
 console.log("Script berhasil dimuat!");
 console.log("==========================================================");
 
-const toggleBtn = document.getElementById('toggleBtn');
-const sidebar = document.getElementById('sidebar');
-const sidebarTombol = document.getElementById("sidebar-tombol");
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
+const sidebar = document.getElementById("sidebar");
+const toggleBtn = document.getElementById("toggleBtn");
+const closeSidebarBtn = document.getElementById("closeSidebarBtn");
+const kontentEdukasi = document.getElementById("kontentEdukasi");
+toggleBtn.addEventListener("click", function() {
+  sidebar.classList.toggle("active");
+  toggleBtn.classList.toggle("active");
 });
-document.addEventListener('click', (e) => {
-  const isClickInsideSidebar = sidebar.contains(e.target);
-  const isClickOnToggle = toggleBtn.contains(e.target);
 
-  if (!isClickInsideSidebar && !isClickOnToggle) {
-    sidebar.classList.remove('active');
-  }
+closeSidebarBtn.addEventListener("click", function() {
+  sidebar.classList.remove("active");
+  toggleBtn.classList.remove("active");
 });
-function toggleMenu(x){
-  x.classList.toggle("active");
+
+function loadContent(page){
+  kontentEdukasi.src = `../konten/halaman${page}.html`;
 }

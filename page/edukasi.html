@@ -1,71 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halaman Edukasi UMKM</title>
-  <link rel="stylesheet" href="../style/edu_style.css" />
-  <style>
-    
-  </style>
+  <link rel="shortcut icon" href="../asset/logo2.png" />
+  <title>halalbizUMKM.id</title>
+  <link rel="stylesheet" href="../style/style_primary.css" />
+  <!-- <link rel="stylesheet" href="../style/style.css" /> -->
 </head>
+
 <body>
+
   <header class="navbar">
+    <div class="sidebar-tombol" id="toggleBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="logo">halalbiz<span style="color: gold;">UMKM.id</span></div>
     <nav>
-      <a href="../index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>    
       <a href="#">Edukasi</a>
-      <a href="tentang.html">Tentang</a>
+      <a href="../page/tentang.html">Tentang</a>
     </nav>
   </header>
 
-  <div class="container">
-    <h1>Halaman Edukasi UMKM</h1>
-
-    <!-- Pendampingan Sertifikat -->
-    <div class="card">
-      <h2>Pendampingan Sertifikat Otomatis</h2>
-      <p>
-        Dapatkan pendampingan otomatis untuk mengurus sertifikasi pelaku UMKM. Kami akan membantu setiap langkah proses secara digital.
-      </p>
-      <button onclick="mulaiPendampingan()">Mulai Pendampingan</button>
-    </div>
-
-    <!-- Informasi & Pengajuan Pembiayaan -->
-    <div class="card">
-      <h2>Informasi & Pengajuan Pembiayaan</h2>
-      <p>
-        Cari tahu informasi pembiayaan terbaru untuk UMKM dan ajukan pembiayaan secara langsung melalui form di bawah ini.
-      </p>
-
-      <form id="formPembiayaan">
-        <label>Nama Lengkap</label>
-        <input type="text" name="nama" required />
-
-        <label>Email</label>
-        <input type="email" name="email" required />
-
-        <label>Nama Usaha</label>
-        <input type="text" name="usaha" required />
-
-        <label>Tujuan Pembiayaan</label>
-        <textarea name="tujuan" rows="4" required></textarea>
-
-        <button type="submit">Ajukan Pembiayaan</button>
-      </form>
-    </div>
+  <div class="sidebar" id="sidebar">
+    <button onclick="loadContent(1)">Apa itu UMKM Halal?</button>
+    <button onclick="loadContent(2)">Mengapa UMKM Halal</button>
+    <button onclick="loadContent(3)">Langkah Awal Menjadi UMKM Halal</button>
   </div>
 
-  <script>
-    function mulaiPendampingan() {
-      alert("Fitur pendampingan otomatis sedang dalam pengembangan.");
-    }
+  <div style="width:100vw; height:calc(100vh - 70px); display:flex; justify-content:center; align-items:center; box-sizing:border-box;">
+    <iframe src="../konten/halaman1.html" frameborder="0" style="width:100%; height:100%; border:none;" id="kontentEdukasi"></iframe>
+  </div>
 
-    document.getElementById("formPembiayaan").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("Pengajuan pembiayaan telah dikirim. Terima kasih!");
-      this.reset();
-    });
-  </script>
+  <script src="../script/script.js"></script>
 </body>
+
 </html>

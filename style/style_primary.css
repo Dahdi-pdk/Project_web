@@ -34,7 +34,9 @@ body {
 .navbar a:hover {
   color: #FFD700;
 }
-
+.logo{
+  margin-left: 30px;
+}
 /* Hero dengan gambar penuh */
 .hero {
   height: 100vh;
@@ -189,6 +191,123 @@ body {
   line-height: 1.6;
   text-align: center;
 }
+.content-edukasi{
+  background-color: #000;
+}
+
+
+
+.sidebar-tombol {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 10px;
+  cursor: pointer;
+  position: absolute;
+}
+.sidebar-tombol span{
+  display: block;
+  height: 4px;
+  background-color: #e6e6e6;
+  border-radius: 2px;
+}
+#closeSidebarBtn{
+  top :50px;
+  left: 50px;
+}
+.sidebar-tombol span:nth-child(1){
+  transform-origin: top left;
+}
+.sidebar-tombol span:nth-child(2){
+  opacity: 1;
+}
+.sidebar-tombol span:nth-child(3){
+  transform-origin: bottom left;
+}
+.sidebar-tombol.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px,5px);
+}
+.sidebar-tombol.active span:nth-child(2){
+  opacity: 0;
+}
+.sidebar-tombol.active span:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.sidebar-tombol:hover {
+  transform: scale(1.2);
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  /* padding-left: 20px; */
+  padding-top: 7%;
+  transition: left 0.3s ease;
+  z-index: 4;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar button {
+  width: 100%;
+  display: block;
+  /* color: white; */
+  padding: 10px 0;
+  text-decoration: none;
+
+}
+
+.sidebar button:hover {
+  background-color: #575757;
+}
+
+/* Konten utama */
+.content {
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.active~.content {
+  margin-left: 250px;
+}
+
+
+
+.banner {
+    
+    background-color: #ffffff;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 900px;
+    border-left: 8px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner h2 {
+    margin-top: 0;
+}
+
+.btn-wa {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #25D366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
 
 /* Responsive untuk kotak visi misi */
 @media (max-width: 900px) {

@@ -16,8 +16,8 @@ body {
   margin: 0 auto;
   padding: 80px;
 }
-h1,
-h2 {
+
+h1, h2 {
   text-align: center;
 }
 
@@ -42,8 +42,7 @@ button:hover {
   background-color: #1d4ed8;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
@@ -56,6 +55,7 @@ form {
   margin-top: 20px;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   width: 100%;
@@ -64,7 +64,6 @@ form {
   align-items: center;
   padding: 1.5rem 2rem;
   background-color: rgba(27, 67, 50, 0.8);
-  /* hijau gelap semi transparan */
   color: #fff;
   z-index: 999;
 }
@@ -78,4 +77,104 @@ form {
 
 .navbar a:hover {
   color: #FFD700;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding-left: 20px;
+  padding-top: 150px;
+  transition: left 0.3s ease;
+  z-index: 4;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Tombol toggle */
+#toggleBtn {
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: fixed;
+  top: 80px;
+  left: 16px;
+  z-index: 1100;
+  background: #1b4332;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Overlay hitam saat sidebar aktif */
+#sidebarOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .sidebar-toggle.mobile-toggle {
+    display: block;
+  }
+  .container {
+    margin-left: 0 !important;
+    padding: 80px 10px;
+  }
+}
+
+@media (min-width: 901px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+  .sidebar-toggle.mobile-toggle {
+    display: none;
+  }
+  .container {
+    margin-left: 260px;
+    padding: 80px 40px;
+  }
 }
