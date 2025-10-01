@@ -11,7 +11,7 @@ key :
 3.Cek versi git
     git --version
 
-4 Konfigurasi git
+4- Konfigurasi git
     git config --global user.name "(nama pengguna)"
     git config --global user.email "(email akun git)"
 
